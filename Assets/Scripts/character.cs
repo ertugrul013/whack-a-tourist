@@ -2,7 +2,7 @@
 public class character
 {
 	public bool isHit;
-	public float snelheid;
+	public float speed;
     public int amountOfKokos;
 }
 
