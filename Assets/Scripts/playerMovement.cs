@@ -5,7 +5,6 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public GameObject coco;
-    
 
     public int aantalCoco = 5;
 
@@ -13,9 +12,7 @@ public class playerMovement : MonoBehaviour
     {
         if (aantalCoco > 0)
         {
-          
-          //  if(Input.GetKeyUp(KeyCode.Space))
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 Instantiate(coco, Camera.main.transform.position + (transform.forward * 2), Camera.main.transform.rotation);
                 aantalCoco--;

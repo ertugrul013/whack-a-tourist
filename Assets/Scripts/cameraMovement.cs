@@ -11,7 +11,7 @@ public class cameraMovement : MonoBehaviour
     void Update()
     {
 
-
+#region movement based on mouse input
         //  transform.Rotate(-Input.GetAxis("Mouse Y"), 0, 0 * -Time.deltaTime * speed);
 
         //  Vector3 currentRotation = transform.localRotation.eulerAngles;
@@ -36,12 +36,7 @@ public class cameraMovement : MonoBehaviour
 
 
         //transform.localRotation = Quaternion.Euler(currentRotation);
-
-
-
-
-
-
+#endregion
 
         //left right
         float xMove = Input.GetAxis("Horizontal") * Time.deltaTime * 10;
