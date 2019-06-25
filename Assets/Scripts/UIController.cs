@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIController : MonoBehaviour
@@ -28,25 +29,27 @@ public class UIController : MonoBehaviour
         }
     }
 
-    void AmountOfCoco(bool isReset = false)
+    public void AmountOfCoco(bool isReset = false)
     {
         //if(isReset) //playercontroller.instance.cocos = 5;
         _cocosLeft.SetText("X {0}", 0);
     }
 
-    void score(int scoreToAdd)
+    public void score(int scoreToAdd)
     {
         currentScore = +scoreToAdd;
         _score.SetText("Score {0}", currentScore);
 
     }
 
-    void Pause()
+    public void Pause()
     {
         if (isPaused) Time.timeScale = 0;
         else if (!isPaused) Time.timeScale = 0;
 
         isPaused = !isPaused;
     }
+
+    public void loadLevel(int index) => SceneManager.LoadScene(index);
 
 }
