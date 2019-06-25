@@ -14,6 +14,7 @@ public class playerMovement : MonoBehaviour
         if (aantalCoco > 0)
         {
           
+          //  if(Input.GetKeyUp(KeyCode.Space))
             if (Input.GetMouseButtonDown(0))
             {
                 Instantiate(coco, Camera.main.transform.position + (transform.forward * 2), Camera.main.transform.rotation);
